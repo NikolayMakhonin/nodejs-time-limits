@@ -69,6 +69,8 @@ describe('time-limits', function () {
 	it('TimeLimit: result', async function () {
 		this.timeout(2000 * timeoutCoef)
 
+		assert.strictEqual(new TimeLimits().run(() => '1'), '1')
+
 		await timeLimitsIterator(3, 100, async timeLimit => {
 			let result
 
@@ -174,7 +176,7 @@ describe('time-limits', function () {
 					callCount = 0
 
 					await Promise.all([
-						test(100, 250)
+						test(100, 300)
 					])
 
 					assert.strictEqual(callCount, 1, `i = ${i}\r\n${JSON.stringify(timeLimit.debug)}`)
@@ -189,7 +191,7 @@ describe('time-limits', function () {
 					assert.strictEqual(callCount, 4, `i = ${i}\r\n${JSON.stringify(timeLimit.debug)}`)
 					callCount = 0
 
-					await delay(250)
+					await delay(300)
 					// console.log(JSON.stringify(JSON.stringify(timeLimit.debug), null, 4))
 
 					await test(null, 2)
@@ -201,12 +203,12 @@ describe('time-limits', function () {
 					assert.strictEqual(callCount, 5, `i = ${i}\r\n${JSON.stringify(timeLimit.debug)}`)
 					callCount = 0
 
-					await test(100, 250)
+					await test(100, 300)
 
 					assert.strictEqual(callCount, 1, `i = ${i}\r\n${JSON.stringify(timeLimit.debug)}`)
 					callCount = 0
 
-					await delay(250)
+					await delay(300)
 
 					assert.strictEqual(callCount, 0, `i = ${i}\r\n${JSON.stringify(timeLimit.debug)}`)
 				} catch (e) {
