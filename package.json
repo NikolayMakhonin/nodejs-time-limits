@@ -1,6 +1,6 @@
 {
   "name": "time-limits",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Queue of async functions (using promises) with multiple time limits or time limits tree",
   "engines": {
     "node": ">= 6.4.0"
