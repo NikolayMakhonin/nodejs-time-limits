@@ -1,0 +1,61 @@
+{
+  "name": "time-limits",
+  "version": "0.0.1",
+  "description": "Queue of async functions (using promises) with multiple time limits or time limits tree",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint --plugin markdown --ext js,md .",
+    "test": "mocha -r ./babel-register --recursive",
+    "watch": "mocha -r ./babel-register --recursive --watch --watch-extensions \"js){100}|^(((?!([\\\\/](dist|tmp|node_modules|reports|\\.[^\\\\/]*)[\\\\/]|\\.(log|bak)$)).)*\"",
+	"karma": "karma start karma.conf.js",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha -r ./babel-register --recursive --report lcovonly -- --reporter spec --check-leaks test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolayMakhonin/nodejs-time-limits.git"
+  },
+  "keywords": [
+    "time",
+    "limit",
+    "queue",
+    "promise",
+    "async",
+    "asynchronous"
+  ],
+  "author": "Nikolay Makhonin",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/NikolayMakhonin/nodejs-time-limits/issues"
+  },
+  "homepage": "https://github.com/NikolayMakhonin/nodejs-time-limits#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-async-to-generator": "^7.2.0",
+    "@babel/plugin-transform-parameters": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-markdown": "^1.0.0-rc.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "karma": "^3.1.3",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-mocha": "^1.3.0",
+    "karma-rollup-preprocessor": "^6.1.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.1.0",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-uglify": "^6.0.0",
+    "uglify-js": "^3.4.9",
+    "babel-polyfill": "^6.26.0"
+  }
+}
