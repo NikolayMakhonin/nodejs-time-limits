@@ -67,9 +67,9 @@ Promise
 [npm-url]: https://npmjs.org/package/time-limits
 [node-version-image]: https://img.shields.io/node/v/time-limits.svg
 [node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://travis-ci.org/NikolayMakhonin/nodejs-time-limits.svg?branch=master
+[travis-image]: https://travis-ci.org/NikolayMakhonin/nodejs-time-limits.svg
 [travis-url]: https://travis-ci.org/NikolayMakhonin/nodejs-time-limits
-[coveralls-image]: https://coveralls.io/repos/github/NikolayMakhonin/nodejs-time-limits/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/NikolayMakhonin/nodejs-time-limits?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/NikolayMakhonin/nodejs-time-limits/badge.svg
+[coveralls-url]: https://coveralls.io/github/NikolayMakhonin/nodejs-time-limits
 [downloads-image]: https://img.shields.io/npm/dm/time-limits.svg
 [downloads-url]: https://npmjs.org/package/time-limits
